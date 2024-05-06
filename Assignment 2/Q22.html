@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find All Indices Example</title>
+    <script>// Define the Rectangle class with width and height properties
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;  // Initialize the width
+    this.height = height; // Initialize the height
+  }
+
+  // Method to calculate the area of the rectangle
+  calculateArea() {
+    return this.width * this.height; // Area = width * height
+  }
+
+  // Method to calculate the perimeter of the rectangle
+  calculatePerimeter() {
+    return 2 * (this.width + this.height); // Perimeter = 2 * (width + height)
+  }
+}
+
+// Example usage
+const myRectangle = new Rectangle(10, 20); // Create an instance of the Rectangle class
+
+// Calculate the area and perimeter
+const area = myRectangle.calculateArea(); // Should be 200
+const perimeter = myRectangle.calculatePerimeter(); // Should be 60
+
+console.log("Rectangle area:", area); // Output: "Rectangle area: 200"
+console.log("Rectangle perimeter:", perimeter); // Output: "Rectangle perimeter: 60"
+
+    </script>
+</head>
+<body onload="displayIndices()">
+    <h1>Find All Indices Example</h1>
+    <p>This script finds all indices of a word in a given text.</p>
+    <p id="output"></p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find All Indices Example</title>
+    <script>function isNull(value) {
+  return value === null; // Return true if the value is null, false otherwise
+}
+
+// Example usage
+const testValue1 = null;
+const testValue2 = "Hello, World!";
+const testValue3 = undefined;
+
+console.log("Is testValue1 null?", isNull(testValue1)); // Output: true
+console.log("Is testValue2 null?", isNull(testValue2)); // Output: false
+console.log("Is testValue3 null?", isNull(testValue3)); // Output: false
+
+    </script>
+</head>
+<body onload="displayIndices()">
+    <h1>Find All Indices Example</h1>
+    <p>This script finds all indices of a word in a given text.</p>
+    <p id="output"></p>
+</body>
+</html>

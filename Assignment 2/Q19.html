@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find All Indices Example</title>
+    <script>function timeConvert(minutes) {
+  const hours = Math.floor(minutes / 60); // Calculate the number of whole hours
+  const remainingMinutes = minutes % 60; // Calculate the remaining minutes
+
+  // Return a formatted string showing the hours and minutes
+  return `${minutes} minutes = ${hours} hour(s) and ${remainingMinutes} minute(s).`;
+}
+
+// Example usage
+const inputMinutes = 200;
+const result = timeConvert(inputMinutes);
+
+console.log(result); // Output: "200 minutes = 3 hour(s) and 20 minute(s)."
+
+    </script>
+</head>
+<body onload="displayIndices()">
+    <h1>Find All Indices Example</h1>
+    <p>This script finds all indices of a word in a given text.</p>
+    <p id="output"></p>
+</body>
+</html>

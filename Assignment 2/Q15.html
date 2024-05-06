@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find All Indices Example</title>
+    <script>// Function to format time with leading zeros for single-digit values
+function formatTime(value) {
+  return value < 10 ? '0' + value : value.toString(); // Add a leading zero if needed
+}
+
+// Function to display the current time
+function displayClock() {
+  const now = new Date(); // Get the current date and time
+  const hours = formatTime(now.getHours()); // Get hours and format
+  const minutes = formatTime(now.getMinutes()); // Get minutes and format
+  const seconds = formatTime(now.getSeconds()); // Get seconds and format
+
+  console.log(`${hours}:${minutes}:${seconds}`); // Display the time in HH:MM:SS format
+}
+
+// Set an interval to update the clock every second (1000 milliseconds)
+setInterval(displayClock, 1000);
+
+    </script>
+</head>
+<body onload="displayIndices()">
+    <h1>Find All Indices Example</h1>
+    <p>This script finds all indices of a word in a given text.</p>
+    <p id="output"></p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find All Indices Example</title>
+    <script>function isArraySorted(array) {
+  const n = array.length;
+
+  // Check if the array has 0 or 1 elements; it's trivially sorted
+  if (n <= 1) {
+    return true; // A single element or empty array is sorted
+  }
+
+  // Loop through the array and check adjacent elements
+  for (let i = 0; i < n - 1; i++) {
+    if (array[i] > array[i + 1]) { // If the current element is greater than the next
+      return false; // The array is not sorted
+    }
+  }
+
+  return true; // If no unsorted pairs are found, the array is sorted
+}
+
+// Example usage
+const sortedArray = [1, 2, 3, 4, 5];
+const unsortedArray = [5, 3, 1, 4, 2];
+
+console.log("Is sorted array sorted?", isArraySorted(sortedArray)); // Output: true
+console.log("Is unsorted array sorted?", isArraySorted(unsortedArray)); // Output: false
+
+    </script>
+</head>
+<body onload="displayIndices()">
+    <h1>Find All Indices Example</h1>
+    <p>This script finds all indices of a word in a given text.</p>
+    <p id="output"></p>
+</body>
+</html>

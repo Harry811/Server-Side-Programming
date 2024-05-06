@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find All Indices Example</title>
+    <script>function isNumber(value) {
+  return typeof value === 'number' && !isNaN(value);
+}
+
+// Example usage
+const testValue1 = 42;
+const testValue2 = 'hello';
+const testValue3 = NaN;
+
+console.log("Is testValue1 a number?", isNumber(testValue1)); // Output: true
+console.log("Is testValue2 a number?", isNumber(testValue2)); // Output: false
+console.log("Is testValue3 a number?", isNumber(testValue3)); // Output: false
+
+    </script>
+</head>
+<body onload="displayIndices()">
+    <h1>Find All Indices Example</h1>
+    <p>This script finds all indices of a word in a given text.</p>
+    <p id="output"></p>
+</body>
+</html>

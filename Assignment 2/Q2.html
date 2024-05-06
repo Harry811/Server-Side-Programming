@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find All Indices Example</title>
+    <script>
+        function linearSearch(array, element) {
+  for (let i = 0; i < array.length; i++) { // Loop through each element
+    if (array[i] === element) { // Check if it matches the desired element
+      return i; // Return the index if found
+    }
+  }
+
+  return -1; // Return -1 if the element is not found
+}
+
+// Example usage
+const numbers = [10, 22, 35, 47, 35, 18, 29];
+const target = 35;
+
+const firstIndex = linearSearch(numbers, target);
+
+console.log(`The first index of ${target} is:`, firstIndex); // Output: 2
+
+    </script>
+</head>
+<body onload="displayIndices()">
+    <h1>Find All Indices Example</h1>
+    <p>This script finds all indices of a word in a given text.</p>
+    <p id="output"></p>
+</body>
+</html>

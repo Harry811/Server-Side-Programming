@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find All Indices Example</title>
+    <script>// Function to safely parse a JSON string and handle errors
+function safeParseJSON(jsonString) {
+  try {
+    // Try to parse the JSON string
+    const parsed = JSON.parse(jsonString);
+
+    console.log("Successfully parsed JSON:", parsed); // If successful, print the parsed object
+  } catch (error) {
+    if (error instanceof SyntaxError) { // Check if the error is a SyntaxError
+      console.error("Failed to parse JSON. Syntax error:", error.message);
+    } else {
+      console.error("An unexpected error occurred:", error.message); // Handle other unexpected errors
+    }
+  }
+}
+
+// Example of a valid JSON string
+const validJSON = '{"name": "John", "age": 30}';
+
+// Example of an invalid JSON string
+const invalidJSON = '{"name": "John", "age": 30,}'; // Trailing comma is invalid in JSON
+
+// Try parsing the valid JSON string
+safeParseJSON(validJSON);
+
+// Try parsing the invalid JSON string
+safeParseJSON(invalidJSON);
+
+    </script>
+</head>
+<body onload="displayIndices()">
+    <h1>Find All Indices Example</h1>
+    <p>This script finds all indices of a word in a given text.</p>
+    <p id="output"></p>
+</body>
+</html>

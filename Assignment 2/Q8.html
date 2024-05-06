@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find All Indices Example</title>
+    <script>function sortString(str) {
+  // Convert the string to an array of characters
+  const charArray = str.split('');
+
+  // Sort the array in alphabetical order
+  charArray.sort();
+
+  // Join the sorted characters back into a string
+  const sortedString = charArray.join('');
+
+  return sortedString; // Return the sorted string
+}
+
+// Example usage
+const originalString = "javascript";
+const sortedString = sortString(originalString);
+
+console.log("Sorted string:", sortedString); // Output: "aacijprstv"
+
+    </script>
+</head>
+<body onload="displayIndices()">
+    <h1>Find All Indices Example</h1>
+    <p>This script finds all indices of a word in a given text.</p>
+    <p id="output"></p>
+</body>
+</html>

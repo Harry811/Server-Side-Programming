@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find All Indices Example</title>
+    <script><script>
+  // List of images for the slideshow
+  const images = [
+    'https://via.placeholder.com/600x400?text=Image+1', // Placeholder images for demonstration
+    'https://via.placeholder.com/600x400?text=Image+2',
+    'https://via.placeholder.com/600x400?text=Image+3'
+  ];
+
+  let currentIndex = 0; // Current image index
+
+  // Function to update the displayed image
+  function updateImage() {
+    const imageElement = document.getElementById('slideshow-image');
+    imageElement.src = images[currentIndex]; // Set the image source to the current image
+  }
+
+  // Function to show the next image
+  function showNextImage() {
+    currentIndex = (currentIndex + 1) % images.length; // Increment the index with wrap-around
+    updateImage(); // Update the displayed image
+  }
+
+  // Function to show the previous image
+  function showPreviousImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length; // Decrement with wrap-around
+    updateImage(); // Update the displayed image
+  }
+
+  // Attach event listeners to the buttons
+  document.getElementById('next-btn').addEventListener('click', showNextImage);
+  document.getElementById('prev-btn').addEventListener('click', showPreviousImage);
+
+  // Initial update to display the first image
+  updateImage(); 
+</script>
+
+    </script>
+</head>
+<body onload="displayIndices()">
+    <h1>Find All Indices Example</h1>
+    <p>This script finds all indices of a word in a given text.</p>
+    <p id="output"></p>
+</body>
+</html>

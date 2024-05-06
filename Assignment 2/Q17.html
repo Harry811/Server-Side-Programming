@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find All Indices Example</title>
+    <script>function stringToWords(str) {
+  // Split the string by one or more whitespace characters (spaces, tabs, newlines, etc.)
+  const words = str.trim().split(/\s+/); // Trim leading/trailing spaces and split
+
+  return words; // Return the array of words
+}
+
+// Example usage
+const sentence = "JavaScript is a versatile language";
+const wordsArray = stringToWords(sentence);
+
+console.log("Array of words:", wordsArray); // Output: ["JavaScript", "is", "a", "versatile", "language"]
+
+    </script>
+</head>
+<body onload="displayIndices()">
+    <h1>Find All Indices Example</h1>
+    <p>This script finds all indices of a word in a given text.</p>
+    <p id="output"></p>
+</body>
+</html>

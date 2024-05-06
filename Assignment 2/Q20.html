@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find All Indices Example</title>
+    <script>// Stack implementation
+class Stack {
+  constructor() {
+    this.items = []; // Array to hold stack elements
+  }
+
+  // Pushes an element onto the stack
+  push(element) {
+    this.items.push(element);
+  }
+
+  // Pops an element from the stack
+  pop() {
+    if (this.isEmpty()) {
+      throw new Error("Stack underflow");
+    }
+    return this.items.pop();
+  }
+
+  // Peeks at the top element of the stack
+  peek() {
+    if (this.isEmpty()) {
+      throw new Error("Stack is empty");
+    }
+    return this.items[this.items.length - 1];
+  }
+
+  // Checks if the stack is empty
+  isEmpty() {
+    return this.items.length === 0;
+  }
+
+  // Checks if a given element is in the stack
+  contains(element) {
+    return this.items.includes(element); // Checks if the element is in the stack
+  }
+}
+
+// Example usage
+const stack = new Stack();
+
+// Push some elements onto the stack
+stack.push(10);
+stack.push(20);
+stack.push(30);
+
+// Check if certain elements are in the stack
+console.log("Stack contains 20?", stack.contains(20)); // Output: true
+console.log("Stack contains 40?", stack.contains(40)); // Output: false
+
+    </script>
+</head>
+<body onload="displayIndices()">
+    <h1>Find All Indices Example</h1>
+    <p>This script finds all indices of a word in a given text.</p>
+    <p id="output"></p>
+</body>
+</html>

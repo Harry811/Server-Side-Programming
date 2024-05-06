@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find All Indices Example</title>
+    <script>// Node class representing each element in the linked list
+class ListNode {
+  constructor(data) {
+    this.data = data;
+    this.next = null; // Points to the next node in the list
+  }
+}
+
+// Singly Linked List class
+class LinkedList {
+  constructor() {
+    this.head = null; // Head points to the first node, null if the list is empty
+  }
+
+  // Adds a new node to the end of the list
+  append(data) {
+    const newNode = new ListNode(data); // Create a new node
+
+    if (this.head === null) { // If the list is empty, set the new node as the head
+      this.head = newNode;
+    } else {
+      let current = this.head; // Start at the head
+      while (current.next) { // Traverse to the end of the list
+        current = current.next;
+      }
+      current.next = newNode; // Add the new node at the end
+    }
+  }
+
+  // Checks if the list is empty
+  isEmpty() {
+    return this.head === null; // If the head is null, the list is empty
+  }
+}
+
+// Example usage
+const linkedList = new LinkedList();
+
+console.log("Is the linked list empty?", linkedList.isEmpty()); // Output: true
+
+linkedList.append(10); // Add a node with data '10'
+linkedList.append(20); // Add a node with data '20'
+
+console.log("Is the linked list empty?", linkedList.isEmpty()); // Output: false
+
+    </script>
+</head>
+<body onload="displayIndices()">
+    <h1>Find All Indices Example</h1>
+    <p>This script finds all indices of a word in a given text.</p>
+    <p id="output"></p>
+</body>
+</html>

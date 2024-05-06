@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find All Indices Example</title>
+    <script>function parseURL(url) {
+  const parsed = new URL(url); // Create a new URL object to parse the given URL
+
+  // Extract the relevant components of the URL
+  const components = {
+    href: parsed.href,          // The entire URL
+    protocol: parsed.protocol,  // e.g., 'https:'
+    hostname: parsed.hostname,  // e.g., 'www.example.com'
+    port: parsed.port,          // e.g., '80' or empty if not specified
+    pathname: parsed.pathname,  // e.g., '/path/to/resource'
+    search: parsed.search,      // The query string, e.g., '?name=value'
+    hash: parsed.hash,          // The fragment identifier, e.g., '#section'
+    host: parsed.host           // Hostname with port, e.g., 'www.example.com:8080'
+  };
+
+  return components; // Return the extracted components
+}
+
+// Example usage
+const url = "https://www.example.com:8080/path/to/resource?name=John&age=30#section1";
+const parsedURL = parseURL(url);
+
+console.log("Parsed URL:", parsedURL);
+
+    </script>
+</head>
+<body onload="displayIndices()">
+    <h1>Find All Indices Example</h1>
+    <p>This script finds all indices of a word in a given text.</p>
+    <p id="output"></p>
+</body>
+</html>

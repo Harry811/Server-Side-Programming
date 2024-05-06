@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find All Indices Example</title>
+    <script>function isRegExp(value) {
+  return value instanceof RegExp; // Check if value is an instance of RegExp
+}
+
+// Example usage
+const regex1 = /abc/; // Literal notation
+const regex2 = new RegExp("xyz"); // Constructor notation
+const nonRegex = "not a regex";
+
+console.log("Is regex1 a RegExp?", isRegExp(regex1)); // Output: true
+console.log("Is regex2 a RegExp?", isRegExp(regex2)); // Output: true
+console.log("Is nonRegex a RegExp?", isRegExp(nonRegex)); // Output: false
+
+    </script>
+</head>
+<body onload="displayIndices()">
+    <h1>Find All Indices Example</h1>
+    <p>This script finds all indices of a word in a given text.</p>
+    <p id="output"></p>
+</body>
+</html>

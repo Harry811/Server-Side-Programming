@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find All Indices Example</title>
+    <script>
+        function findAllIndices(text, word) {
+            const indices = [];
+            let startIndex = 0;
+
+            // As long as there's a match, continue finding next ones
+            while ((startIndex = text.indexOf(word, startIndex)) !== -1) {
+                indices.push(startIndex); // Store the index where the word was found
+                startIndex += word.length; // Move past the current word
+            }
+
+            return indices; // Return all found indices
+        }
+
+        function displayIndices() {
+            const text = "The quick brown fox jumps over the lazy dog. The fox is fast.";
+            const word = "fox";
+
+            const indices = findAllIndices(text, word);
+
+            console.log("Indices of 'fox':", indices);
+            document.getElementById('output').textContent = "Indices of 'fox': " + indices.join(", ");
+        }
+    </script>
+</head>
+<body onload="displayIndices()">
+    <h1>Find All Indices Example</h1>
+    <p>This script finds all indices of a word in a given text.</p>
+    <p id="output"></p>
+</body>
+</html>

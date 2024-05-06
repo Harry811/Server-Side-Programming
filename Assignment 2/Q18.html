@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find All Indices Example</title>
+    <script>function toggleCase(str) {
+  let result = ''; // The result string with toggled cases
+
+  for (let i = 0; i < str.length; i++) { // Loop through each character
+    const char = str[i]; // Get the current character
+
+    // If the character is uppercase, convert to lowercase
+    if (char === char.toUpperCase()) {
+      result += char.toLowerCase();
+    } 
+    // If the character is lowercase, convert to uppercase
+    else if (char === char.toLowerCase()) {
+      result += char.toUpperCase();
+    } 
+    // If it's a non-alphabetic character, add it as-is
+    else {
+      result += char;
+    }
+  }
+
+  return result; // Return the final result with toggled cases
+}
+
+// Example usage
+const inputString = "Hello World!";
+const toggledString = toggleCase(inputString);
+
+console.log("Original String:", inputString); // Output: "Hello World!"
+console.log("Toggled Case String:", toggledString); // Output: "hELLO wORLD!"
+
+    </script>
+</head>
+<body onload="displayIndices()">
+    <h1>Find All Indices Example</h1>
+    <p>This script finds all indices of a word in a given text.</p>
+    <p id="output"></p>
+</body>
+</html>

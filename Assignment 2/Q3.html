@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find All Indices Example</title>
+    <script>
+   function quickSort(array) {
+  // If the array has 0 or 1 elements, it's already sorted
+  if (array.length <= 1) {
+    return array;
+  }
+
+  const pivot = array[array.length - 1]; // Choose the last element as pivot
+  const left = []; // Elements less than or equal to pivot
+  const right = []; // Elements greater than pivot
+
+  // Partitioning
+  for (let i = 0; i < array.length - 1; i++) { // Exclude the pivot
+    if (array[i] <= pivot) {
+      left.push(array[i]);
+    } else {
+      right.push(array[i]);
+    }
+  }
+
+  // Recursively apply QuickSort on left and right partitions, and combine the results
+  return [...quickSort(left), pivot, ...quickSort(right)];
+}
+
+// Example usage
+const list = [45, 78, 23, 56, 12, 89, 19];
+const sortedList = quickSort(list);
+
+console.log("Sorted list:", sortedList); // Output: [12, 19, 23, 45, 56, 78, 89]
+
+    </script>
+</head>
+<body onload="displayIndices()">
+    <h1>Find All Indices Example</h1>
+    <p>This script finds all indices of a word in a given text.</p>
+    <p id="output"></p>
+</body>
+</html>
